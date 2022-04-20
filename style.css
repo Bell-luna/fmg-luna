@@ -71,7 +71,7 @@ body {
   }
 }
 .descrip {
-  background-color: rgb(209 159 159);
+  background-color: #f0eae5;
     font-size: large
 }
 .descrip .opciones {
@@ -86,15 +86,20 @@ body {
 }
 
 .descrip div {
-  background-color: rgb(209, 159, 159);
+  background-color: rgb(252, 251, 251);
   text-align: center;
   border: 2px solid black;
-  background-image: linear-gradient( to top ,#a77474 ,#f0eae5);
+  background-image: linear-gradient( to top ,#dfc3c3 ,#f0eae5);
 }
 .info {
   display: grid;
   background-color: cornsilk;
   border: 1px solid black;
 }
-
+.opciones { transition: 3s;
+}
+.opciones:hover 
+{
+  transform: scaleX(.5) ;
+}
 
