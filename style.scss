@@ -1,8 +1,9 @@
+$myWhite: #f0eae5;
+
 body {
   margin: 0;
-  background-color: #f0eae5;
+  background-color: $myWhite;
 }
-
 .menu {
   justify-content: flex-end;
   align-items: flex-start;
@@ -12,16 +13,16 @@ body {
   background-size: cover;
   height: 100px;
 }
-
 .menu a {
   margin-right: 5px;
-  color: #f0eae5;
+  color: $myWhite;
   text-decoration: none;
   width: 100px;
   font-size: med;
-}
-.menu a:hover {
-  color: rgb(224, 214, 214);
+
+  &:hover {
+    color: rgb(224, 214, 214);
+  }
 }
 
 .titu {
@@ -30,26 +31,26 @@ body {
   margin: 10px;
   margin-right: 10px;
   border-style: double;
-  background-image: linear-gradient(to top, #a77474, #f0eae5);
+  background-image: linear-gradient( to top ,#a77474 ,#f0eae5);
 }
 
 
 .descargas {
   display: flex;
   align-items: center;
-}
-.descargas img {
-  width: 100px;
+  &img {
+    width: 100px;
+  }
 }
 
 .logos {
   display: flex;
-}
-.logos img {
-  width: 30px;
-  margin-right: 5px;
-}
 
+  & img {
+    width: 30px;
+    margin-right: 5px;
+  }
+}
 .opcion {
   margin-bottom: 20px;
   width: 100%;
@@ -58,58 +59,53 @@ body {
   justify-content: center;
   flex-direction: column-reverse;
   justify-self: end;
-}
-.opcion a:hover {
-  color: black;
+  & a:hover {
+    color: black;
+  }
 }
 
 .letra {
   font-size: x-large;
 }
-
 @media (max-width: 300px) {
   .menu {
     flex-direction: column;
   }
-
   .menu {
     width: 100%;
   }
 }
 .descrip {
-  background-color: #f0eae5;
-  font-size: large;
+  background-color: $myWhite;
+    font-size: large
 }
-
 .descrip .opciones {
   display: grid;
   grid-template-columns: 50% 50%;
-}
-
+  }
 @media (max-width: 600px) {
   .descrip .opciones {
     display: grid;
     grid-template-columns: 100%;
   }
 }
+
 .descrip div {
   background-color: rgb(252, 251, 251);
   text-align: center;
   border: 2px solid black;
-  background-image: linear-gradient(to top, #dfc3c3, #f0eae5);
+  background-image: linear-gradient( to top ,#dfc3c3 ,$myWhite);
 }
-
 .info {
   display: grid;
   background-color: cornsilk;
   border: 1px solid black;
 }
-
-.opciones {
+.opciones { 
   transition: 3s;
-}
-.opciones:hover {
-  transform: scaleX(0.5);
+  &:hover {
+    transform: scaleX(.5) ;
 }
 
-/*# sourceMappingURL=style.css.map */
+}
+
