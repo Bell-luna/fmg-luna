@@ -182,8 +182,8 @@ body {
 }
 
 .opciones {
-  -webkit-transition: 3s;
-  transition: 3s;
+  -webkit-transition: 4s;
+  transition: 4s;
 }
 
 .opciones:hover {
