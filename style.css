@@ -4,9 +4,18 @@ body {
 }
 
 .menu {
-  justify-content: flex-end;
-  align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.menu {
   background-image: url("img/gym.jpg");
   background-position: center;
   background-size: cover;
@@ -20,45 +29,102 @@ body {
   width: 100px;
   font-size: med;
 }
+
 .menu a:hover {
-  color: rgb(224, 214, 214);
+  color: #e0d6d6;
+}
+
+.titu {
+  margin-bottom: 5px;
+  width: 10px;
 }
 
 .titu {
   background-color: #a77474;
-  padding: 5px;
-  margin: 10px;
   margin-right: 10px;
   border-style: double;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a77474), to(#f0eae5));
   background-image: linear-gradient(to top, #a77474, #f0eae5);
 }
 
-
 .descargas {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.descargas img {
+
+.descargasimg {
   width: 100px;
 }
 
+.button, .button--error, .button--success {
+  color: black;
+  width: 100px;
+  height: 30px;
+  font-size: 10px;
+  background-color: white;
+}
+
+.button--error {
+  background-color: red;
+}
+
+.button--success {
+  background-color: green;
+}
+
 .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-.logos img {
+
+.logo, .fb, .ins, .wp {
   width: 30px;
   margin-right: 5px;
+}
+
+.fb {
+  background-color: #5a5aff;
+}
+
+.ins {
+  background-color: #ba0c83;
+}
+
+.wp {
+  background-color: #6af06a;
+}
+
+.opcion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .opcion {
   margin-bottom: 20px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column-reverse;
-  justify-self: end;
 }
+
+.opcion {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
 .opcion a:hover {
   color: black;
 }
@@ -69,47 +135,71 @@ body {
 
 @media (max-width: 300px) {
   .menu {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   .menu {
     width: 100%;
   }
 }
+
 .descrip {
   background-color: #f0eae5;
   font-size: large;
 }
 
 .descrip .opciones {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 50% 50%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
 }
 
 @media (max-width: 600px) {
   .descrip .opciones {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 100%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
   }
 }
+
 .descrip div {
-  background-color: rgb(252, 251, 251);
+  background-color: #fcfbfb;
   text-align: center;
   border: 2px solid black;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#dfc3c3), to(#f0eae5));
   background-image: linear-gradient(to top, #dfc3c3, #f0eae5);
 }
 
 .info {
+  display: -ms-grid;
   display: grid;
   background-color: cornsilk;
   border: 1px solid black;
 }
 
 .opciones {
+  -webkit-transition: 3s;
   transition: 3s;
 }
+
 .opciones:hover {
-  transform: scaleX(0.5);
+  -webkit-transform: scaleX(0.5);
+          transform: scaleX(0.5);
 }
 
+.lead1 {
+  background-color: #dfc3c3;
+}
+
+.lead2 {
+  background-color: #f0eae5;
+}
+
+.lead3 {
+  background-color: aliceblue;
+}
 /*# sourceMappingURL=style.css.map */
