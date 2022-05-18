@@ -28,7 +28,7 @@ body {
   @include flex-flex-end-flex-start
 }
 .menu {
-  background-image: url("img/gym.jpg");
+  background-image:$myWhite;
   background-position: center;
   background-size: cover;
   height: 100px;

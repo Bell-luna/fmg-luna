@@ -1,7 +1,7 @@
 {
   "name": "fmgluna",
   "version": "1.0.0",
-  "description": "buscador de gym en las zonas donde se recida",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass --watch style.scss style.css"
