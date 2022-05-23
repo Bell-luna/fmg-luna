@@ -48,6 +48,7 @@ body {
 .descargas {
   display: flex;
   align-items: center;
+  text-align: center;
 }
 
 .descargasimg {
@@ -78,15 +79,14 @@ body {
   
 }
 
+
 .logo, .fb, .ins, .wp {
   width: 30px;
   margin-right: 10px;
-
-  
 }
 
 .fb {
-  background-color: #c2c2c7;
+  background-color: #fafafd;
 }
 
 .ins {
@@ -129,6 +129,10 @@ body {
 
 .letra {
   font-size: x-large;
+  text-align: center;
+  background-color:#f3eeee;
+  margin: 150px;
+  padding: 20px;
 }
 
 @media (max-width: 300px) {
@@ -168,7 +172,7 @@ body {
 .descrip div {
   background-color: #fcfbfb;
   text-align: center;
-  border: 0.1px solid black;
+  border: none;
 
   
 }
@@ -189,17 +193,25 @@ body {
   -webkit-transform: scaleX(0.5);
           transform: scaleX(0.5);
 }
-
+.leads, .lead1, .lead2, .lead3{
+  font-size: x-large;
+  text-align: center;
+  margin: 150px;
+  padding: 20px;
+}
 .lead1 {
   background-color: #dfc3c3;
+  
 }
 
 .lead2 {
   background-color: #f0eae5;
+  
 }
 
 .lead3 {
   background-color: aliceblue;
+  
 }
 .caja {
   font-family: sans-serif;
@@ -209,7 +221,8 @@ body {
   background: #b1b2b4;
   margin: 0 0 25px;
   overflow: hidden;
-  padding: 20px;
+  padding: 5px;
+
   }
 .small{
   background-color:#f0eae5;
@@ -235,5 +248,131 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+.imagen:hover  {
+  -webkit-transform:scale(1.3);
+  transform:scale(1.3);
+}
+.imagen {
+  overflow:hidden;
+  text-align: center;
+}
+.margen{
+  text-align: right;
+}
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+body{
+  height: 100%; 
+  font-family: 'Noto Sans', sans-serif;
+  background-color: transparent; 
+}
+
+
+.contact_form{  
+  width: 460px; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  padding-top: 30px;
+  padding-bottom: 20px;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+
+input{
+  background-color: #fbfbfb; 
+  width: 408px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #898789; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+}
+
+
+textarea{
+  background-color: #fbfbfb; 
+  width: 405px; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #5f5d5e; 
+  margin-top: 10px;  
+  padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+}
+
+
+label{
+  display: block; 
+  float: center;  
+}
+
+
+button{
+  height: 45px; 
+  padding-left: 5px;
+  padding-right: 5px;   
+  margin-bottom: 20px; 
+  margin-top: 10px;   
+  text-transform: uppercase;
+  background-color: #e9e3e8; 
+  border-style: solid; 
+  border-radius: 10px;  
+  width: 420px;   
+  cursor: pointer;
+}
+
+button p{
+  color: rgb(9, 9, 9); 
+}
+.aviso{
+  font-size: 13px;  
+  color: #0e0e0e;  
+}
+
+
+h1{
+  font-size: 39px;  
+  text-align: letf; 
+  padding-bottom: 20px; 
+  color: #968796;
+}
+
+
+p{
+  font-size: 14px; 
+  color: #0e0e0e; 
+}
+
+
+::-webkit-input-placeholder {
+ color:transparent;
+}
+
+.texto{
+  font-size:larger;
+  background-color: #e9e3e8;
+  margin: 200px;
+}
+
+.imagen{
+  max-width: 55%;
+height: auto;
+margin: 20px;
+padding: 5px;
+display: block;
+margin: auto;
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
