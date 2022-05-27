@@ -20,22 +20,24 @@ body {
   color: #716b6b;
 }
 
-@media (max-width: 300px) {
-  .menu {
-    flex-direction: column;
-  }
-
-  .menu {
-    width: 100%;
-  }
-}
-.titu .descrip {
+.menu {
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
 @media (max-width: 600px) {
-  .descrip .menu {
+  .menu {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+.titu .button, .titu footer .button2, footer .titu .button2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+@media (max-width: 600px) {
+  .titu .button, .titu footer .button2, footer .titu .button2 {
     display: grid;
     grid-template-columns: 100%;
   }
@@ -68,6 +70,11 @@ body {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+@media (max-width: 600px) {
+  .button, footer .button2 {
+    flex-direction: column;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -97,6 +104,7 @@ footer .button, footer .button2 {
   margin-bottom: 30px;
 }
 footer .button .button, footer .button2 .button, footer .button .button2, footer .button2 .button2 {
+  display: flex;
   color: #0a0a0a;
   font-size: 10px;
   background-color: #f0eae5;
