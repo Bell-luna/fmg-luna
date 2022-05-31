@@ -1,3 +1,27 @@
+$myWhite: #f0eae5;
+$myBlack: #0a0a0a;
+$myBrown: #716b6b;
+$myGray: #b1b2b4;
+$myPink: #fbfbfb;
+
+@mixin flex-flex-end-flex-start {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin sizes($mt, $pl, $mb) {
+  margin-top: $mt;
+  padding-left: $pl;
+  margin-bottom: $mb;
+}
+
 body {
   background-color: white;
   margin: 0;
@@ -5,43 +29,43 @@ body {
 }
 
 .menu {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  @include flex-flex-end-flex-start;
   height: 50px;
-}
-.menu a {
-  margin-right: 15px;
-  color: #0a0a0a;
-  text-decoration: none;
-  font-size: med;
-}
-.menu a:hover {
-  color: #716b6b;
-}
+  grid-column: 1 / 4;
 
-.menu {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  a {
+    margin-right: 5px;
+    color: $myBlack;
+    text-decoration: none;
+    font-size: med;
+    margin-right: 10px;
+
+    &:hover {
+      color: $myBrown;
+    }
+  }
 }
 
 @media (max-width: 600px) {
   .menu {
-    display: grid;
-    grid-template-columns: 100%;
+    grid-column: 4 / 4;
+  }
+  .menu {
+    width: 100%;
   }
 }
-.titu .button, .titu footer .button2, footer .titu .button2 {
+
+.titu .descrip {
   display: grid;
   grid-template-columns: 50% 50%;
 }
-
 @media (max-width: 600px) {
-  .titu .button, .titu footer .button2, footer .titu .button2 {
+  .descrip .menu {
     display: grid;
     grid-template-columns: 100%;
   }
 }
+
 .titu {
   margin-bottom: 5px;
   width: 100%;
@@ -53,7 +77,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: white;
-  background-color: #b1b2b4;
+  background-color: $myGray;
   margin: 0 0 25;
   padding: 5px;
 }
@@ -64,98 +88,104 @@ body {
   gap: 1rem;
   padding: 0 1rem;
 }
-
 @media (max-width: 600px) {
   .botones {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding: 0;
+    overflow: hidden;
+
+    button {
+      padding: 0 1rem;
+    }
   }
 }
-@media (max-width: 600px) {
-  .button, footer .button2 {
-    flex-direction: column;
-  }
-}
+
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f0eae5;
+  background-color: $myWhite;
   padding: 10px 0;
+
+  .logos {
+    @include flex-center-center;
+    margin-bottom: 30px;
+
+    img {
+      width: 30px;
+      margin: 0 10px;
+      transition: 0.5s opacity;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .links {
+    @include flex-center-center;
+    margin-bottom: 30px;
+
+    .button {
+      color: $myBlack;
+      font-size: 10px;
+      background-color: $myWhite;
+      border-radius: 10px;
+      border: 1px solid $myBlack;
+      margin: 0 10px;
+      max-width: 50%;
+    }
+  }
+
+  .button2 {
+    @extend .button;
+    background-color: rgb(250, 235, 235);
+  }
 }
-footer .logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-footer .logos img {
-  width: 30px;
-  margin: 0 10px;
-  transition: 0.5s opacity;
-}
-footer .logos img:hover {
-  opacity: 0.7;
-}
-footer .button, footer .button2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-footer .button .button, footer .button2 .button, footer .button .button2, footer .button2 .button2 {
-  display: flex;
-  color: #0a0a0a;
-  font-size: 10px;
-  background-color: #f0eae5;
-  border-radius: 10px;
-  border: 1px solid #0a0a0a;
-  margin: 0 10px;
-}
-footer .button2 {
-  background-color: rgb(250, 235, 235);
+.sn {
+  color: $myBlack;
 }
 
-.sn {
-  color: #0a0a0a;
-}
+// contacto //
 
 .contact_form {
   width: 460px;
   height: auto;
-  margin: 80px auto;
+  margin: 10% auto;
   border-radius: 10px;
   padding-top: 30px;
   padding-bottom: 20px;
-  background-color: #fbfbfb;
-  padding-left: 30px;
+  background-color: $myPink;
+}
+@media (max-width: 600px) {
+  .contact_form {
+    width: 90%;    
+    margin: 0 auto;
+  }
 }
 
 input {
-  background-color: #fbfbfb;
-  width: 408px;
+  background-color: $myPink;
+  width: 90%;
   height: 40px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
   border-color: #898789;
-  margin-top: 10px;
-  padding-left: 10px;
-  margin-bottom: 20px;
+  @include sizes(10px, 10px, 20px);
 }
 
 textarea {
-  background-color: #fbfbfb;
-  width: 405px;
+  background-color: $myPink;
+  width: 90%;
   height: 150px;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
   border-color: #5f5d5e;
   padding-top: 15px;
-  margin-top: 10px;
-  padding-left: 10px;
-  margin-bottom: 20px;
+  @include sizes(10px, 10px, 20px);
 }
 
 label {
@@ -173,17 +203,15 @@ button {
   background-color: #e9e3e8;
   border-style: solid;
   border-radius: 10px;
-  width: 420px;
   cursor: pointer;
 }
 
 button p {
   color: rgb(9, 9, 9);
 }
-
 .aviso {
   font-size: 13px;
-  color: #0a0a0a;
+  color: $myBlack;
 }
 
 h1 {
@@ -195,38 +223,48 @@ h1 {
 
 p {
   font-size: 14px;
-  color: #0a0a0a;
+  color: $myBlack;
 }
 
 ::-webkit-input-placeholder {
   color: transparent;
 }
 
+// objetivos //
+
 .letra {
   font-size: x-large;
   text-align: center;
   background-color: #f3eeee;
-  margin: 150px;
+  margin: 20px 20%;
   padding: 20px;
 }
+@media (max-width: 600px) {
+  .letra {
+    margin: 10%;
+  }
+}
 
-.leads, .lead1, .lead2, .lead3 {
+.leads,
+.lead1,
+.lead2,
+.lead3 {
   font-size: x-large;
   text-align: center;
   margin: 150px;
   padding: 20px;
 }
 
-.lead1 {
-  background-color: #dfc3c3;
-}
+$leadds: (
+  1: #dfc3c3,
+  2: #f0eae5,
+  3: aliceblue,
+);
 
-.lead2 {
-  background-color: #f0eae5;
-}
-
-.lead3 {
-  background-color: aliceblue;
+@each $leadNumber, $color in $leadds {
+  .lead#{$leadNumber} {
+    background-color: $color;
+  }
 }
 
 .imagen {
@@ -237,12 +275,10 @@ p {
   display: block;
   margin: auto;
 }
-
 .imagen:hover {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
-
 .imagen {
   overflow: hidden;
   text-align: center;
@@ -257,5 +293,3 @@ p {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-/*# sourceMappingURL=style.css.map */
